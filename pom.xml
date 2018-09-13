@@ -76,7 +76,7 @@
         </dependency>
         <dependency>
             <groupId>com.bst</groupId>
-            <artifactId>pmgr-organization</artifactId>
+            <artifactId>pmgr-entities</artifactId>
             <version>0.0.3-SNAPSHOT</version>
         </dependency>
         <dependency>
