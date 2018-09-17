@@ -18,6 +18,34 @@ public class Organization {
 		return id;
 	}
 	
+	private String misson;
+	private String name;
+	private String description;
+	
+	public String getMisson() {
+		return misson;
+	}
+
+	public void setMisson(String misson) {
+		this.misson = misson;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 	@OneToMany(mappedBy = "organization")
 	private List<Division> divisions;
 
