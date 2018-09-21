@@ -9,8 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
-import com.bst.pmgr.entities.documents.EnterpriseEnvironmentalFactors;
-
 @Entity
 public class Division {
     @Id

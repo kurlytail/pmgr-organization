@@ -60,13 +60,22 @@ public class Organization {
 	@OneToMany(mappedBy = "organization")
 	private List<FunctionalStrength> functionalStrengths;
 	
-	
 	@OneToMany(mappedBy = "organization")
 	private List<FunctionalStrength> legalJurisdictions;
 	
-	
 	@OneToMany(mappedBy = "organization")
 	private List<FunctionalStrength> physicalLocations;
+	
+	@OneToMany(mappedBy = "organization")
+	private List<KeyAttribute> keyAttributes;
+
+	public List<KeyAttribute> getKeyAttributes() {
+		return keyAttributes;
+	}
+
+	public void setKeyAttributes(List<KeyAttribute> keyAttributes) {
+		this.keyAttributes = keyAttributes;
+	}
 
 	public List<FunctionalStrength> getFunctionalStrengths() {
 		return functionalStrengths;
