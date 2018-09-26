@@ -17,11 +17,11 @@ public class EnterpriseEnvironmentalFactors extends OrganizationalDocument {
 		this.organization = organization;
 	}
     
-	private StructuralEEF structuralEEF;
-	public StructuralEEF getStructuralEEF() {
-		return structuralEEF;
-	}
-	public void setStructuralEEF(StructuralEEF structuralEEF) {
-		this.structuralEEF = structuralEEF;
-	}
+//	private StructuralEEF structuralEEF;
+//	public StructuralEEF getStructuralEEF() {
+//		return structuralEEF;
+//	}
+//	public void setStructuralEEF(StructuralEEF structuralEEF) {
+//		this.structuralEEF = structuralEEF;
+//	}
 }
