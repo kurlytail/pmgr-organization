@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Organization {
@@ -47,26 +48,6 @@ public class Organization {
 	}
 
 	@OneToMany(mappedBy = "organization")
-	private List<Division> divisions;
-
-	public List<Division> getDivisions() {
-		return divisions;
-	}
-
-	public void setDivisions(List<Division> divisions) {
-		this.divisions = divisions;
-	}
-	
-	@OneToMany(mappedBy = "organization")
-	private List<FunctionalStrength> functionalStrengths;
-	
-	@OneToMany(mappedBy = "organization")
-	private List<FunctionalStrength> legalJurisdictions;
-	
-	@OneToMany(mappedBy = "organization")
-	private List<FunctionalStrength> physicalLocations;
-	
-	@OneToMany(mappedBy = "organization")
 	private List<KeyAttribute> keyAttributes;
 
 	public List<KeyAttribute> getKeyAttributes() {
@@ -76,30 +57,16 @@ public class Organization {
 	public void setKeyAttributes(List<KeyAttribute> keyAttributes) {
 		this.keyAttributes = keyAttributes;
 	}
-
-	public List<FunctionalStrength> getFunctionalStrengths() {
-		return functionalStrengths;
-	}
-
-	public void setFunctionalStrengths(List<FunctionalStrength> functionalStrengths) {
-		this.functionalStrengths = functionalStrengths;
-	}
-
-	public List<FunctionalStrength> getLegalJurisdictions() {
-		return legalJurisdictions;
-	}
-
-	public void setLegalJurisdictions(List<FunctionalStrength> legalJurisdictions) {
-		this.legalJurisdictions = legalJurisdictions;
-	}
-
-	public List<FunctionalStrength> getPhysicalLocations() {
-		return physicalLocations;
-	}
-
-	public void setPhysicalLocations(List<FunctionalStrength> physicalLocations) {
-		this.physicalLocations = physicalLocations;
-	}
 	
+	@OneToOne
+	private EnterpriseEnvironmentalFactors enterpriseEnvironmentalFactors;
+
+	public EnterpriseEnvironmentalFactors getEnterpriseEnvironmentalFactors() {
+		return enterpriseEnvironmentalFactors;
+	}
+
+	public void setEnterpriseEnvironmentalFactors(EnterpriseEnvironmentalFactors enterpriseEnvironmentalFactors) {
+		this.enterpriseEnvironmentalFactors = enterpriseEnvironmentalFactors;
+	}
 	
 }

@@ -1,26 +1,27 @@
 package com.bst.pmgr.organization.entities;
 
-import java.util.List;
-
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
-import com.bst.pmgr.entities.Document;
+import javax.persistence.ManyToOne;
 
 @Entity
-public class EnterpriseEnvironmentalFactors extends Document {
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long id;
-    
-    @OneToMany(mappedBy = "enterpriseEnvironmentalFactors")
-    private List<Division> divisions;
-
-	public Long getId() {
-		return id;
-	}
+public class EnterpriseEnvironmentalFactors extends OrganizationalDocument {
 	
+	@ManyToOne
+    private Organization organization;
+
+	public Organization getOrganization() {
+		return organization;
+	}
+
+	public void setOrganization(Organization organization) {
+		this.organization = organization;
+	}
+    
+	private StructuralEEF structuralEEF;
+	public StructuralEEF getStructuralEEF() {
+		return structuralEEF;
+	}
+	public void setStructuralEEF(StructuralEEF structuralEEF) {
+		this.structuralEEF = structuralEEF;
+	}
 }

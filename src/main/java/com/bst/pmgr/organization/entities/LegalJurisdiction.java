@@ -3,21 +3,13 @@ package com.bst.pmgr.organization.entities;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
-@Entity
-public class LegalJurisdiction {
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long id;
+import com.bst.pmgr.entities.Section;
 
-	public Long getId() {
-		return id;
-	}
+@Entity
+public class LegalJurisdiction extends Section {
 	
 	@ManyToOne
     private Organization organization;
