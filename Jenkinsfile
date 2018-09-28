@@ -32,14 +32,14 @@ pipeline {
                 checkout scm
                     
                 sh '/usr/local/bin/mvn --batch-mode release:update-versions -DautoVersionSubmodules=true -DdevelopmentVersion=$MAVEN_VERSION_NUMBER'
-                sh '/usr/local/bin/mvn deploy' 
+                sh '/usr/local/bin/mvn -s settings.xml deploy' 
             }
 
-            post {
-                always{    
-                    junit '**/surefire-reports/*.xml' 
-                }
-            }
+//            post {
+//                always{    
+                    // junit '**/surefire-reports/*.xml' 
+//                }
+//            }
         }
     }
 }
