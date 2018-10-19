@@ -6,6 +6,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import com.bst.pmgr.organization.entities.LegalJurisdiction;
 
 @RepositoryRestResource
-public interface LegalJurisdictionRepository extends CrudRepository<LegalJurisdiction, Long>{
+public interface LegalJurisdictionRepository extends CrudRepository<LegalJurisdiction, Long> {
 
 }

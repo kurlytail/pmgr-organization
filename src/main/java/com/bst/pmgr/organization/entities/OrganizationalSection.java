@@ -11,5 +11,5 @@ public class OrganizationalSection extends Section {
 		return this.getDocument() != null ? ((OrganizationalDocument) this.getDocument()).getOrganization()
 				: ((OrganizationalSection) this.getParentSection()).getOrganization();
 	}
-	
+
 }

@@ -5,23 +5,25 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class EnterpriseEnvironmentalFactors extends OrganizationalDocument {
-	
-	@ManyToOne
-    private Organization organization;
 
+	@ManyToOne
+	private Organization organization;
+
+	@Override
 	public Organization getOrganization() {
-		return organization;
+		return this.organization;
 	}
 
-	public void setOrganization(Organization organization) {
+	@Override
+	public void setOrganization(final Organization organization) {
 		this.organization = organization;
 	}
-    
-//	private StructuralEEF structuralEEF;
-//	public StructuralEEF getStructuralEEF() {
-//		return structuralEEF;
-//	}
-//	public void setStructuralEEF(StructuralEEF structuralEEF) {
-//		this.structuralEEF = structuralEEF;
-//	}
+
+	// private StructuralEEF structuralEEF;
+	// public StructuralEEF getStructuralEEF() {
+	// return structuralEEF;
+	// }
+	// public void setStructuralEEF(StructuralEEF structuralEEF) {
+	// this.structuralEEF = structuralEEF;
+	// }
 }

@@ -6,6 +6,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import com.bst.pmgr.organization.entities.Division;
 
 @RepositoryRestResource
-public interface DivisionRepository extends CrudRepository<Division, Long>{
+public interface DivisionRepository extends CrudRepository<Division, Long> {
 
 }
